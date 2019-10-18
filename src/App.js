@@ -1,25 +1,43 @@
 import React from 'react';
+
 import logo from './logo.svg';
-import './App.css';
+
+import NewsList from './components/NewsList'
+import OurProductAd from './components/OurProductAd'
+import SearchBlock from './components/SearchBlock'
+import ImageAd from './components/ImageAd'
+import Widgets from './components/Widgets'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="row">
+        {/*
+          NewsList      - Блок, в котором будет выводиться список новостей за определенное время
+          OurProductAd  - Реклама какого-либо продукта компании
+        */}
+        <NewsList data={}/>
+        <OurProductAd/>
+      </div>
+      <div className="row">
+        {/*
+          SearchBlock - Основной блок поиска
+        */}        
+        <SearchBlock/>
+      </div>
+      <div className="row">
+        {/*
+          ImageAd - Сторонняя реклама
+        */}
+        <ImageAd/>
+      </div>
+      <div className="row">
+        {/*
+          Widgets - Список виджетов
+        */}
+        <Widgets/>
+      </div>
+    </>
   );
 }
 
